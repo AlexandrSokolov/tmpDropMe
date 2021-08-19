@@ -1,0 +1,18 @@
+package com.company.your.great.project.app;
+
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+import javax.ejb.Stateless;
+
+@Stateless
+public class ApplicationService {
+
+  private static final Logger logger = LogManager.getLogger(ApplicationService.class.getName());
+
+  public void handle(){
+    logger.debug(() -> "lazy loading message");
+  }
+
+}
